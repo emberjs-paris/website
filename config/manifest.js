@@ -4,13 +4,18 @@
 module.exports = function(/* environment, appConfig */) {
   return {
     name: "EmberJS Paris Meetup",
-    short_name: "EmberJS Paris",
+    short_name: "Ember Paris",
     description: "EmberJS Paris Meetup",
     start_url: "/",
     display: "standalone",
     background_color: "#fff",
     theme_color: "#fff",
     icons: [
+      {
+        src: "tile.png",
+        sizes: "180x135",
+        type: "image/png"
+      }
     ]
   };
 }
