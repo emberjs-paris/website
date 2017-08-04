@@ -14,6 +14,12 @@ module.exports = function(defaults) {
     },
     vendorFiles: {
       'jquery.js': null
+    },
+    'ember-cli-staticboot': {
+      paths: [
+        '/'
+      ],
+      destDir: ''
     }
   });
 
