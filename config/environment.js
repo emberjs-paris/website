@@ -31,7 +31,7 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'manifest-src': "'self'",
-      'script-src': "'self' 'nonce-2726c7f26c'"
+      'script-src': "'self' 'sha256-lMTkViQb2p96zB0LmJReuzMQylgZJ4/YHDHLHEf3ah4='"
     }
   };
 
