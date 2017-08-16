@@ -9,16 +9,36 @@
 
     {{content-for "head"}}
 
-    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link rel="stylesheet" href="{{rootURL}}assets/website.css">
+    <link id="script-vendor" rel="preload" as="script" href="{{rootURL}}assets/vendor.js">
+    <link id="script-app" rel="preload" as="script" href="{{rootURL}}assets/website.js">
+    <link id="style-app" rel="preload" as="style" href="{{rootURL}}assets/website.css">
 
     {{content-for "head-footer"}}
   </head>
   <body>
     {{content-for "body"}}
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/website.js"></script>
+    <script nonce="2726c7f26c">
+      function loadScript(src, cb) {
+        var script = document.createElement('script');
+        if (cb) {
+          script.addEventListener('load', cb);
+        }
+        script.src = src;
+        document.head.appendChild(script);
+      }
+
+      window.addEventListener('load', function() {
+        document.getElementById('style-app').rel = 'stylesheet';
+
+        var vendorSrc = document.getElementById('script-vendor').href;
+        var appSrc = document.getElementById('script-app').href;
+
+        loadScript(vendorSrc, function() {
+          loadScript(appSrc);
+        });
+      });
+    </script>
 
     {{content-for "body-footer"}}
   </body>

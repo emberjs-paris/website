@@ -24,7 +24,10 @@ module.exports = function(defaults) {
     addons: {
       blacklist: [
         'ember-cli-fastboot',
-        'ember-cli-staticboot'
+        'ember-cli-staticboot',
+        //'ember-service-worker',
+        //'ember-service-worker-asset-cache',
+        //'ember-service-worker-cache-fallback'
       ]
     }
   });
