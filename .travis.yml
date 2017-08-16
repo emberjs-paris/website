@@ -1,7 +1,7 @@
 ---
 language: node_js
 node_js:
-  - "6"
+  - "8"
 
 sudo: false
 dist: trusty
@@ -21,3 +21,9 @@ install:
 
 script:
   - yarn test
+
+deploy:
+  provider: script
+  script: scripts/deploy.sh
+  on:
+    branch: dev
