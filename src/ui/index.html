@@ -9,9 +9,9 @@
 
     {{content-for "head"}}
 
-    <link id="script-vendor" rel="preload" as="script" href="{{rootURL}}assets/vendor.js">
-    <link id="script-app" rel="preload" as="script" href="{{rootURL}}assets/website.js">
-    <link id="style-app" rel="preload" as="style" href="{{rootURL}}assets/website.css">
+    <link rel="preload" as="script" href="{{rootURL}}assets/vendor.js">
+    <link rel="preload" as="script" href="{{rootURL}}assets/website.js">
+    <link rel="preload" as="style" href="{{rootURL}}assets/website.css">
 
     {{content-for "head-footer"}}
   </head>
@@ -29,13 +29,12 @@
       }
 
       window.addEventListener('load', function() {
-        document.getElementById('style-app').rel = 'stylesheet';
+        var links = document.querySelectorAll('head > link[rel=preload]');
 
-        var vendorSrc = document.getElementById('script-vendor').href;
-        var appSrc = document.getElementById('script-app').href;
+        links[2].rel = 'stylesheet';
 
-        loadScript(vendorSrc, function() {
-          loadScript(appSrc);
+        loadScript(links[0].href, function() {
+          loadScript(links[1].href);
         });
       });
     </script>
