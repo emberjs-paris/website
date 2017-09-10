@@ -32,7 +32,7 @@
     "ember-cli-sri": "^2.1.0",
     "ember-cli-staticboot": "tchak/ember-cli-staticboot#update-to-latest-fastboot",
     "ember-cli-uglify": "^1.2.0",
-    "ember-cli-update": "^0.6.1",
+    "ember-cli-update": "^0.6.6",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-native-dom-event-dispatcher": "^0.6.3",
