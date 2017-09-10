@@ -12,7 +12,7 @@ module.exports = function(/* environment, appConfig */) {
     theme_color: "#fff",
     icons: [
       {
-        src: "tile.png",
+        src: "images/tile.png",
         sizes: "180x135",
         type: "image/png"
       }

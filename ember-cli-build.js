@@ -5,12 +5,13 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     'asset-cache': {
       include: [
-        'assets/**/*'
+        'assets/**/*',
+        'images/**/*'
       ]
     },
     'esw-cache-fallback': {
       patterns: [ '/' ],
-      version: '2' // Changing the version will bust the cache
+      version: '3' // Changing the version will bust the cache
     },
     vendorFiles: {
       'jquery.js': null

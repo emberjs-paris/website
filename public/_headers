@@ -1,4 +1,5 @@
 /assets/*
+/images/*
   Cache-Control: public, max-age=365000000, immutable
 /*
   X-Frame-Options: DENY
