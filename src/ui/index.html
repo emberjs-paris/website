@@ -9,8 +9,7 @@
 
     {{content-for "head"}}
 
-    <link rel="preload" as="script" href="{{rootURL}}assets/vendor.js">
-    <link rel="preload" as="script" href="{{rootURL}}assets/website.js">
+    <link rel="preload" as="script" href="{{rootURL}}assets/app.js">
     <link rel="preload" as="style" href="{{rootURL}}assets/website.css">
 
     {{content-for "head-footer"}}
@@ -19,23 +18,15 @@
     {{content-for "body"}}
 
     <script>
-      function loadScript(src, cb) {
-        var script = document.createElement('script');
-        if (cb) {
-          script.addEventListener('load', cb);
-        }
-        script.src = src;
-        document.head.appendChild(script);
-      }
-
       window.addEventListener('load', function() {
         var links = document.querySelectorAll('head > link[rel=preload]');
 
-        links[2].rel = 'stylesheet';
+        links[1].rel = 'stylesheet';
 
-        loadScript(links[0].href, function() {
-          loadScript(links[1].href);
-        });
+        var script = document.createElement('script');
+        script.src = links[0].href;
+        script.async = true;
+        document.head.appendChild(script);
       });
     </script>
 
