@@ -8,6 +8,4 @@
   Content-Security-Policy: manifest-src 'self'; script-src 'self' 'sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso='; default-src 'none'; font-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; media-src 'self';
 /
   Link: </assets/app.js>; rel=preload; as=script
-  Link: </sw-registration.js>; rel=preload; as=script
-  Link: </sw.js>; rel=preload; as=script
   Link: </assets/website.css>; rel=preload; as=style
