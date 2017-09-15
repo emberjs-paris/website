@@ -6,3 +6,8 @@
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
   Content-Security-Policy: manifest-src 'self'; script-src 'self' 'sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso='; default-src 'none'; font-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; media-src 'self';
+/
+  Link: </assets/app-b90a02d27e4015182305098a022743c9.js>; rel=preload; as=script
+  Link: </sw-registration.js>; rel=preload; as=script
+  Link: </sw.js>; rel=preload; as=script
+  Link: </assets/website-d410cf62b82c7390fb6f2534591609bf.css>; rel=preload; as=style
