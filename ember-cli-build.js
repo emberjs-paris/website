@@ -1,5 +1,8 @@
 /* eslint-env node */
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const Funnel = require('broccoli-funnel');
+const removeFile = require('broccoli-file-remover');
+const MergeTrees = require('broccoli-merge-trees');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -30,6 +33,9 @@ module.exports = function(defaults) {
         //'ember-service-worker-asset-cache',
         //'ember-service-worker-cache-fallback'
       ]
+    },
+    fingerprint: {
+      replaceExtensions: ['html', 'css', 'js', 'headers']
     }
   });
 
@@ -46,5 +52,14 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  let tree = app.toTree();
+
+  let headersFile = new Funnel(tree, {
+    files: ['netlify.headers'],
+    getDestinationPath: () => '_headers'
+  });
+
+  tree = removeFile(tree, { srcFile: 'netlify.headers' });
+
+  return new MergeTrees([tree, headersFile]);
 };
