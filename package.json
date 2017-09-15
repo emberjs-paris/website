@@ -17,7 +17,6 @@
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
-    "broccoli-file-remover": "^0.3.1",
     "ember-cli": "github:ember-cli/ember-cli",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.3.0",
