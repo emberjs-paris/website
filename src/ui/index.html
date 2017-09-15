@@ -19,16 +19,11 @@
 
     <script>
       window.addEventListener('load', function() {
-        var links = document.querySelectorAll('head > link[rel=preload]');
-
-        links[1].rel = 'stylesheet';
-
-        var script = document.createElement('script');
-        script.src = links[0].href;
-        script.async = true;
-        document.head.appendChild(script);
+        document.querySelector('head > link[as=style]').rel = 'stylesheet';
       });
     </script>
+
+    <script defer="defer" src="{{rootURL}}assets/app.js"></script>
 
     {{content-for "body-footer"}}
   </body>
