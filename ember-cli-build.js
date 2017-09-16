@@ -3,17 +3,23 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const Funnel = require('broccoli-funnel');
 const mergeTrees = require('broccoli-merge-trees');
 
-module.exports = function(defaults) {
+const SW_VERSION = '4'; // Changing the version will bust the cache
+
+module.exports = function (defaults) {
   var app = new EmberApp(defaults, {
+    'ember-service-worker': {
+      registrationStrategy: 'inline'
+    },
     'asset-cache': {
       include: [
         'assets/**/*',
         'images/**/*'
-      ]
+      ],
+      version: SW_VERSION
     },
     'esw-cache-fallback': {
-      patterns: [ '/' ],
-      version: '4' // Changing the version will bust the cache
+      patterns: ['/'],
+      version: SW_VERSION
     },
     vendorFiles: {
       'jquery.js': null
@@ -27,10 +33,7 @@ module.exports = function(defaults) {
     addons: {
       blacklist: [
         'ember-cli-fastboot',
-        'ember-cli-staticboot',
-        //'ember-service-worker',
-        //'ember-service-worker-asset-cache',
-        //'ember-service-worker-cache-fallback'
+        'ember-cli-staticboot'
       ]
     },
     fingerprint: {

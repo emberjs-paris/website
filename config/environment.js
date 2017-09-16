@@ -1,7 +1,11 @@
 /* eslint-env node */
 'use strict';
 
-module.exports = function(environment) {
+function csp(...sources) {
+  return `'${sources.join("' '")}'`;
+}
+
+module.exports = function (environment) {
   let ENV = {
     'ember-resolver': {
       features: {
@@ -31,7 +35,11 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'manifest-src': "'self'",
-      'script-src': "'self' 'sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso='"
+      'script-src': csp(
+        "self",
+        "sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso=",
+        "sha256-eTCgFNR35DsTcP7Hae6DsP0kdUl2PKAQxGXGFvOTXjs="
+      )
     }
   };
 
