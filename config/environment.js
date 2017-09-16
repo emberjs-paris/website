@@ -38,7 +38,13 @@ module.exports = function (environment) {
       'script-src': csp(
         "self",
         "sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso=",
-        "sha256-eTCgFNR35DsTcP7Hae6DsP0kdUl2PKAQxGXGFvOTXjs="
+        "sha256-eTCgFNR35DsTcP7Hae6DsP0kdUl2PKAQxGXGFvOTXjs=",
+        "sha256-S15KOuOY2QCOcSlnW07Fuw/2GIByCPLS8WPQ00QAHrk=",
+        "sha256-37u63EBe1EibDZ3vZNr6mxLepqlY1CQw+4N89HrzP9s="
+      ),
+      'style-src': csp(
+        "self",
+        "sha256-aqNNdDLnnrDOnTNdkJpYlAxKVJtLt9CtFLklmInuUAE="
       )
     }
   };
