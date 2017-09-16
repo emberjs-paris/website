@@ -26,7 +26,8 @@ module.exports = function (defaults) {
     },
     'ember-cli-staticboot': {
       paths: [
-        '/'
+        '/',
+        '404'
       ],
       destDir: '/static'
     },
@@ -40,6 +41,8 @@ module.exports = function (defaults) {
       replaceExtensions: ['html', 'css', 'js', 'headers']
     }
   });
+
+  app.import('node_modules/tachyons/css/tachyons.css');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
@@ -62,11 +65,7 @@ module.exports = function (defaults) {
   });
 
   tree = new Funnel(tree, {
-    exclude: [
-      'netlify.headers',
-      'assets/vendor-*',
-      'assets/website-*.js'
-    ]
+    exclude: ['netlify.headers']
   });
 
   return mergeTrees([tree, headersFile]);
