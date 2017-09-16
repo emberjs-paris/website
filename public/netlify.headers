@@ -5,7 +5,7 @@
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: manifest-src 'self'; script-src 'self' 'sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso=' 'sha256-eTCgFNR35DsTcP7Hae6DsP0kdUl2PKAQxGXGFvOTXjs='; default-src 'none'; font-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; media-src 'self';
+  Content-Security-Policy: manifest-src 'self'; script-src 'self' 'sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso=' 'sha256-m9taKmEombeKW3ABisX58cE1OIW7P1UxEgJxvbasBpE='; default-src 'none'; font-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; media-src 'self';
 /
   Link: </assets/app.js>; rel=preload; as=script
   Link: </assets/website.css>; rel=preload; as=style
