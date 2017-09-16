@@ -2,6 +2,9 @@
     "name": "ember-cli-one-script",
     "keywords": [
       "ember-addon"
-    ]
+    ],
+    "ember-addon": {
+      "before": "broccoli-asset-rev"
+    }
   }
   
