@@ -40,7 +40,8 @@ module.exports = function (environment) {
         "sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso=",
         "sha256-eTCgFNR35DsTcP7Hae6DsP0kdUl2PKAQxGXGFvOTXjs=",
         "sha256-S15KOuOY2QCOcSlnW07Fuw/2GIByCPLS8WPQ00QAHrk=",
-        "sha256-37u63EBe1EibDZ3vZNr6mxLepqlY1CQw+4N89HrzP9s="
+        "sha256-37u63EBe1EibDZ3vZNr6mxLepqlY1CQw+4N89HrzP9s=",
+        "sha256-5F9qkMcwZI0sADrix4xBPOh7Yo/HyEEtXaYBqLNT6oc="
       ),
       'style-src': csp(
         "self",
