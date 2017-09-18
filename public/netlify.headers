@@ -6,7 +6,7 @@
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy-Report-Only: manifest-src 'self'; script-src 'self' 'sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso=' 'sha256-eTCgFNR35DsTcP7Hae6DsP0kdUl2PKAQxGXGFvOTXjs=' 'sha256-S15KOuOY2QCOcSlnW07Fuw/2GIByCPLS8WPQ00QAHrk=' 'sha256-37u63EBe1EibDZ3vZNr6mxLepqlY1CQw+4N89HrzP9s=' 'sha256-5F9qkMcwZI0sADrix4xBPOh7Yo/HyEEtXaYBqLNT6oc='; style-src 'self' 'sha256-aqNNdDLnnrDOnTNdkJpYlAxKVJtLt9CtFLklmInuUAE='; default-src 'none'; font-src 'self'; connect-src 'self'; img-src 'self'; media-src 'self'; report-uri https://78fee3fec0f16583e43d1588d769c62d.report-uri.io/r/default/csp/reportOnly;
+  Content-Security-Policy-Report-Only: manifest-src 'self'; script-src 'self' 'sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso=' 'sha256-eTCgFNR35DsTcP7Hae6DsP0kdUl2PKAQxGXGFvOTXjs=' 'sha256-S15KOuOY2QCOcSlnW07Fuw/2GIByCPLS8WPQ00QAHrk=' 'sha256-37u63EBe1EibDZ3vZNr6mxLepqlY1CQw+4N89HrzP9s=' 'sha256-5F9qkMcwZI0sADrix4xBPOh7Yo/HyEEtXaYBqLNT6oc='; style-src 'self' 'sha256-aqNNdDLnnrDOnTNdkJpYlAxKVJtLt9CtFLklmInuUAE='; default-src 'none'; font-src 'self'; connect-src 'self'; img-src 'self'; media-src 'self'; report-uri https://tchak.report-uri.io/r/default/csp/reportOnly;
 /
   Link: </assets/app.js>; rel=preload; as=script
   Link: </assets/app.css>; rel=preload; as=style
