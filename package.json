@@ -14,7 +14,8 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "debug": "ember build && node --debug-brk --inspect ./node_modules/.bin/ember serve"
+    "debug": "ember build && node --debug-brk --inspect ./node_modules/.bin/ember serve",
+    "csp-headers": "ember csp-headers --environment production --report-uri https://78fee3fec0f16583e43d1588d769c62d.report-uri.io/r/default/csp/reportOnly"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
