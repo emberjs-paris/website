@@ -40,6 +40,7 @@ module.exports = function (environment) {
         "self",
         "sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso=",
         "sha256-eTCgFNR35DsTcP7Hae6DsP0kdUl2PKAQxGXGFvOTXjs=",
+        // Test
         "sha256-S15KOuOY2QCOcSlnW07Fuw/2GIByCPLS8WPQ00QAHrk=",
         "sha256-37u63EBe1EibDZ3vZNr6mxLepqlY1CQw+4N89HrzP9s=",
         "sha256-5F9qkMcwZI0sADrix4xBPOh7Yo/HyEEtXaYBqLNT6oc="
@@ -71,7 +72,15 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.contentSecurityPolicy = {
+      'manifest-src': "'self'",
+      'script-src': csp(
+        "self",
+        "sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso=",
+        "sha256-m9taKmEombeKW3ABisX58cE1OIW7P1UxEgJxvbasBpE="
+      ),
+      'report-uri': "https://tchak.report-uri.io/r/default/csp/reportOnly"
+    };
   }
 
   return ENV;
