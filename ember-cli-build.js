@@ -5,16 +5,13 @@ const mergeTrees = require('broccoli-merge-trees');
 
 const SW_VERSION = '4'; // Changing the version will bust the cache
 
-module.exports = function (defaults) {
+module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     'ember-service-worker': {
       registrationStrategy: 'inline'
     },
     'asset-cache': {
-      include: [
-        'assets/**/*',
-        'images/**/*'
-      ],
+      include: ['assets/**/*', 'images/**/*'],
       version: SW_VERSION
     },
     'esw-cache-fallback': {
@@ -24,18 +21,14 @@ module.exports = function (defaults) {
     vendorFiles: {
       'jquery.js': null
     },
-    'ember-cli-staticboot': {
-      paths: [
-        '/',
-        '404'
-      ],
-      destDir: '/static'
+    'ember-app-shell': {
+      visitPaths: {
+        '/app-shell': 'app-shell.html',
+        '/404': '404.html'
+      }
     },
     addons: {
-      blacklist: [
-        'ember-cli-fastboot',
-        'ember-cli-staticboot'
-      ]
+      blacklist: ['ember-cli-fastboot']
     },
     fingerprint: {
       replaceExtensions: ['html', 'css', 'js', 'headers']

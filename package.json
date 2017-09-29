@@ -14,11 +14,13 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "debug": "ember build && node --debug-brk --inspect ./node_modules/.bin/ember serve",
+    "debug":
+      "ember build && node --debug-brk --inspect ./node_modules/.bin/ember serve",
     "csp-headers": "ember csp-headers --environment production"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
+    "ember-app-shell": "tchak/ember-app-shell#multi-shell",
     "ember-cli": "github:ember-cli/ember-cli",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.3.0",
@@ -33,7 +35,6 @@
     "ember-cli-sass": "^7.0.0",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
-    "ember-cli-staticboot": "tchak/ember-cli-staticboot#update-to-latest-fastboot",
     "ember-cli-uglify": "^1.2.0",
     "ember-cli-update": "^0.6.6",
     "ember-export-application-global": "^2.0.0",
@@ -50,9 +51,7 @@
     "tachyons": "^4.8.1"
   },
   "ember-addon": {
-    "paths": [
-      "lib/ember-cli-one-script"
-    ]
+    "paths": ["lib/ember-cli-one-script"]
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
