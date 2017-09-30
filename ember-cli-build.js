@@ -21,11 +21,8 @@ module.exports = function(defaults) {
     vendorFiles: {
       'jquery.js': null
     },
-    'ember-app-shell': {
-      visitPaths: {
-        '/app-shell': 'app-shell.html',
-        '/404': '404.html'
-      }
+    'ember-fastboot-app-shell': {
+      paths: ['app-shell', '404']
     },
     addons: {
       blacklist: ['ember-cli-fastboot']

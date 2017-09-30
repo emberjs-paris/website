@@ -16,13 +16,10 @@
     "test": "ember test",
     "debug":
       "ember build && node --debug-brk --inspect ./node_modules/.bin/ember serve",
-    "csp-headers": "ember csp-headers --environment production",
-    "install-chrome":
-      "wget 'https://download-chromium.appspot.com/dl/Linux_x64?type=snapshots' --no-check-certificate -q -O chrome.zip && unzip chrome.zip"
+    "csp-headers": "ember csp-headers --environment production"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
-    "ember-app-shell": "tchak/ember-app-shell#multi-shell",
     "ember-cli": "github:ember-cli/ember-cli",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.3.0",
