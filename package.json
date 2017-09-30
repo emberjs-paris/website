@@ -18,7 +18,7 @@
       "ember build && node --debug-brk --inspect ./node_modules/.bin/ember serve",
     "csp-headers": "ember csp-headers --environment production",
     "install-chrome":
-      "curl -L https://raw.githubusercontent.com/GoogleChrome/chrome-launcher/master/scripts/download-chrome.sh | bash"
+      "wget 'https://download-chromium.appspot.com/dl/Linux_x64?type=snapshots' --no-check-certificate -q -O chrome.zip && unzip chrome.zip"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
