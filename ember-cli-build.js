@@ -32,6 +32,9 @@ module.exports = function(defaults) {
   });
 
   app.import('node_modules/tachyons/css/tachyons.css');
+  app.import('node_modules/loglevel/dist/loglevel.js', {
+    using: [{ transformation: 'amd', as: 'loglevel' }]
+  });
 
   let tree = app.toTree();
 

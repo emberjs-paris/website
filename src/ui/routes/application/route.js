@@ -1,6 +1,7 @@
 import Route from '@ember/routing/route';
 import { inject } from '@ember/service';
 import fetch from 'fetch';
+import log from 'loglevel';
 
 const LOCALES = {
   'fr-fr': '/assets/intl/translations/fr-fr.json',
@@ -18,7 +19,7 @@ export default Route.extend({
       .then(response => response.json())
       .then(locales => this.get('intl').addTranslations(locale, locales))
       .then(() => this.get('intl').setLocale([locale]))
-      .catch(err => console.error(err));
+      .catch(err => log.error(err));
   },
   getLocaleURL(locale) {
     let fastboot = this.get('fastboot');
