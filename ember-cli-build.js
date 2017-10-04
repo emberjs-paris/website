@@ -2,6 +2,7 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const Funnel = require('broccoli-funnel');
 const mergeTrees = require('broccoli-merge-trees');
+const { extensions } = require('broccoli-asset-rev/lib/default-options');
 
 const SW_VERSION = '4'; // Changing the version will bust the cache
 
@@ -24,10 +25,8 @@ module.exports = function(defaults) {
     'ember-fastboot-app-shell': {
       paths: ['app-shell', '404']
     },
-    addons: {
-      blacklist: ['ember-cli-fastboot']
-    },
     fingerprint: {
+      extensions: extensions.concat(['json']),
       replaceExtensions: ['html', 'css', 'js', 'headers']
     }
   });

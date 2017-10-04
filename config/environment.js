@@ -34,11 +34,15 @@ module.exports = function(environment) {
       // when it is created
     },
 
+    fastboot: {
+      hostWhitelist: ['emberjs.paris', /^localhost:\d+$/]
+    },
+
     contentSecurityPolicy: {
       'manifest-src': "'self'",
       'script-src': csp(
         'self',
-        'sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso=',
+        'sha256-wkaYpaS7MXK6pZevEXbHArUs2Tr4J9hxuUz+A7z/XUo=',
         'sha256-eTCgFNR35DsTcP7Hae6DsP0kdUl2PKAQxGXGFvOTXjs=',
         // Test
         'sha256-S15KOuOY2QCOcSlnW07Fuw/2GIByCPLS8WPQ00QAHrk=',
@@ -77,7 +81,7 @@ module.exports = function(environment) {
       'manifest-src': "'self'",
       'script-src': csp(
         'self',
-        'sha256-q/zSYNOkfmp5Sx9ZcacTGQN7iG9yCAkzbnmZ4SprZso=',
+        'sha256-wkaYpaS7MXK6pZevEXbHArUs2Tr4J9hxuUz+A7z/XUo=',
         'sha256-m9taKmEombeKW3ABisX58cE1OIW7P1UxEgJxvbasBpE='
       ),
       'report-uri': 'https://tchak.report-uri.io/r/default/csp/reportOnly'
