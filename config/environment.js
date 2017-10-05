@@ -82,7 +82,8 @@ module.exports = function(environment) {
       'script-src': csp(
         'self',
         'sha256-wkaYpaS7MXK6pZevEXbHArUs2Tr4J9hxuUz+A7z/XUo=',
-        'sha256-m9taKmEombeKW3ABisX58cE1OIW7P1UxEgJxvbasBpE='
+        'sha256-m9taKmEombeKW3ABisX58cE1OIW7P1UxEgJxvbasBpE=',
+        'sha256-wkaYpaS7MXK6pZevEXbHArUs2Tr4J9hxuUz+A7z/XUo='
       ),
       'report-uri': 'https://tchak.report-uri.io/r/default/csp/reportOnly'
     };
