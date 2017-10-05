@@ -34,6 +34,7 @@
     "ember-cli-sass": "^7.0.0",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
+    "ember-cli-staticboot": "tchak/ember-cli-staticboot#app-shell",
     "ember-cli-uglify": "^1.2.0",
     "ember-cli-update": "^0.6.6",
     "ember-export-application-global": "^2.0.0",

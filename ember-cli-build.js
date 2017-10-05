@@ -22,8 +22,8 @@ module.exports = function(defaults) {
     vendorFiles: {
       'jquery.js': null
     },
-    'ember-fastboot-app-shell': {
-      paths: ['app-shell', '404']
+    'ember-cli-staticboot': {
+      paths: ['/app-shell', '/404']
     },
     fingerprint: {
       extensions: extensions.concat(['json']),
