@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>EmberJS Paris</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for "head"}}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EmberJS Paris</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="preload" as="style" href="{{rootURL}}assets/app.css">
+  {{content-for "head"}}
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+  <link rel="preload" as="style" href="{{rootURL}}assets/app.css">
 
-    <script>
-      window.addEventListener('load', function() {
-        document.querySelector('head > link[as=style]').rel = 'stylesheet';
-      });
-    </script>
+  {{content-for "head-footer"}}
+</head>
 
-    <script async src="{{rootURL}}assets/app.js"></script>
+<body>
+  {{content-for "body"}}
 
-    {{content-for "body-footer"}}
-  </body>
+  <script>
+    window.addEventListener('load', function () {
+      document.querySelector('head > link[as=style]').rel = 'stylesheet';
+    });
+  </script>
+
+  <script async src="{{rootURL}}assets/app.js"></script>
+
+  {{content-for "body-footer"}}
+</body>
+
 </html>

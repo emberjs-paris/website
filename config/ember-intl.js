@@ -58,7 +58,7 @@ module.exports = function(env) {
     * @type {Boolean}
     * @default "false"
     */
-    publicOnly: env !== 'test',
+    publicOnly: false,
 
     /**
     * Path where translations are kept.  This is relative to the project root.
@@ -69,16 +69,6 @@ module.exports = function(env) {
     * @type {String}
     * @default "translations"
     */
-    inputPath: 'translations',
-
-    /**
-    * Path where compiled translations are stored.  This is relative to the dist
-    * folder root.
-    *
-    * @property outputPath
-    * @type {String}
-    * @default "translations"
-    */
-    outputPath: env === 'test' ? 'translations' : 'assets/intl/translations'
+    inputPath: 'translations'
   };
 };
