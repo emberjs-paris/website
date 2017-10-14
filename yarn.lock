@@ -1302,7 +1302,7 @@ broccoli-clean-css@^1.1.0:
     inline-source-map-comment "^1.0.5"
     json-stable-stringify "^1.0.0"
 
-broccoli-concat@^3.2.2:
+broccoli-concat@^3.0.4, broccoli-concat@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/broccoli-concat/-/broccoli-concat-3.2.2.tgz#86ffdc52606eb590ba9f6b894c5ec7a016f5b7b9"
   dependencies:
@@ -1356,6 +1356,16 @@ broccoli-file-creator@^1.1.1:
     mkdirp "^0.5.1"
     rsvp "~3.0.6"
     symlink-or-copy "^1.0.1"
+
+broccoli-file-remover@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/broccoli-file-remover/-/broccoli-file-remover-0.3.1.tgz#cc76fc8d64d1531823d0a7b147e274b3e88de41d"
+  dependencies:
+    broccoli-writer "~0.1.1"
+    mkdirp "~0.5.0"
+    rimraf "~2.2.8"
+    symlink-or-copy "^1.0.0"
+    walk-sync "^0.1.3"
 
 broccoli-filter@^0.1.11:
   version "0.1.14"
@@ -1463,7 +1473,7 @@ broccoli-merge-trees@1.1.1:
     rimraf "^2.4.3"
     symlink-or-copy "^1.0.0"
 
-broccoli-merge-trees@^1.0.0, broccoli-merge-trees@^1.1.0, broccoli-merge-trees@^1.1.1, broccoli-merge-trees@^1.2.1:
+broccoli-merge-trees@^1.0.0, broccoli-merge-trees@^1.1.0, broccoli-merge-trees@^1.1.1, broccoli-merge-trees@^1.1.4, broccoli-merge-trees@^1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/broccoli-merge-trees/-/broccoli-merge-trees-1.2.4.tgz#a001519bb5067f06589d91afa2942445a2d0fdb5"
   dependencies:
@@ -2622,6 +2632,15 @@ ember-cli-broccoli-sane-watcher@^2.0.4:
     rsvp "^3.0.18"
     sane "^1.1.1"
 
+ember-cli-concat@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-concat/-/ember-cli-concat-1.2.1.tgz#3f74605b35c5672c8f190bc3b4582b3f7f694148"
+  dependencies:
+    broccoli-concat "^3.0.4"
+    broccoli-file-remover "^0.3.1"
+    broccoli-merge-trees "^1.1.4"
+    ember-cli-babel "^5.1.6"
+
 ember-cli-content-security-policy@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-content-security-policy/-/ember-cli-content-security-policy-1.0.0.tgz#4f7d72997d4209cd59f10d3b0070fdb39593ed2d"
@@ -2804,9 +2823,9 @@ ember-cli-staticboot@tchak/ember-cli-staticboot#app-shell:
     broccoli-plugin "^1.2.1"
     broccoli-replace "^0.12.0"
     core-object "^2.0.5"
-    critical "^0.9.1"
     ember-cli-babel "^6.3.0"
-    fastboot "^1.1.0"
+    ember-cli-fastboot simonihmig/ember-cli-fastboot#nested-addon
+    fastboot "^1.0.0"
     mkdirp "^0.5.1"
     portfinder "^1.0.3"
     rsvp "^3.2.1"
@@ -3109,9 +3128,9 @@ ember-service-worker-asset-cache@^0.6.1:
     ember-cli-babel "^5.1.6"
     glob "^7.1.1"
 
-ember-service-worker-cache-fallback@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/ember-service-worker-cache-fallback/-/ember-service-worker-cache-fallback-0.6.1.tgz#80cd4c3cbd82b62d942f7a5330e29bdae2411750"
+ember-service-worker-index@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/ember-service-worker-index/-/ember-service-worker-index-0.6.3.tgz#c01ea350b13e54ea8555b33403f94549954fbc1b"
   dependencies:
     broccoli-merge-trees "^1.2.1"
     broccoli-plugin "^1.3.0"
@@ -3134,15 +3153,14 @@ ember-service-worker@^0.6.9:
     hash-for-dep "^1.0.2"
     rollup-plugin-replace "^1.1.1"
 
-ember-source@~2.15.0:
-  version "2.15.2"
-  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-2.15.2.tgz#544c7bcee7b50532e4a10c5572ddf42c835abc93"
+ember-source@~2.16.0:
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-2.16.0.tgz#2becd7966278fe453046b91178ede665c2cf241a"
   dependencies:
     "@glimmer/compiler" "^0.25.3"
     "@glimmer/node" "^0.25.3"
     "@glimmer/reference" "^0.25.3"
     "@glimmer/runtime" "^0.25.3"
-    "@glimmer/util" "^0.25.3"
     broccoli-funnel "^1.2.0"
     broccoli-merge-trees "^2.0.0"
     ember-cli-get-component-path-option "^1.0.0"
@@ -3154,7 +3172,7 @@ ember-source@~2.15.0:
     ember-cli-valid-component-name "^1.0.0"
     ember-cli-version-checker "^1.3.1"
     ember-router-generator "^1.2.3"
-    handlebars "^4.0.6"
+    inflection "^1.12.0"
     jquery "^3.2.1"
     resolve "^1.3.3"
     rsvp "^3.6.1"
@@ -4429,7 +4447,7 @@ indexof@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
 
-inflection@^1.7.0, inflection@^1.7.1:
+inflection@^1.12.0, inflection@^1.7.0, inflection@^1.7.1:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/inflection/-/inflection-1.12.0.tgz#a200935656d6f5f6bc4dc7502e1aecb703228416"
 
@@ -5641,7 +5659,7 @@ mkdirp@0.5.0:
   dependencies:
     minimist "0.0.8"
 
-mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.1:
+mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
@@ -6779,7 +6797,7 @@ rimraf@2, rimraf@^2.2.8, rimraf@^2.3.2, rimraf@^2.3.4, rimraf@^2.4.3, rimraf@^2.
   dependencies:
     glob "^7.0.5"
 
-rimraf@~2.2.6:
+rimraf@~2.2.6, rimraf@~2.2.8:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
 

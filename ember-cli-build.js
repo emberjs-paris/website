@@ -4,20 +4,23 @@ const Funnel = require('broccoli-funnel');
 const mergeTrees = require('broccoli-merge-trees');
 const { extensions } = require('broccoli-asset-rev/lib/default-options');
 
-const SW_VERSION = '4'; // Changing the version will bust the cache
-
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     'ember-service-worker': {
-      registrationStrategy: 'inline'
+      registrationStrategy: 'inline',
+      versionStrategy: 'project-revision'
     },
     'asset-cache': {
       include: ['assets/**/*', 'images/**/*'],
-      version: SW_VERSION
+      version: '4'
     },
-    'esw-cache-fallback': {
-      patterns: ['/'],
-      version: SW_VERSION
+    emberCliConcat: {
+      js: {
+        concat: true
+      },
+      css: {
+        concat: true
+      }
     },
     vendorFiles: {
       'jquery.js': null
