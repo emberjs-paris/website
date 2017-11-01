@@ -14,8 +14,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "debug":
-      "ember build && node --debug-brk --inspect ./node_modules/.bin/ember serve",
+    "debug": "ember build && node --debug-brk --inspect ./node_modules/.bin/ember serve",
     "csp-headers": "ember csp-headers --environment production"
   },
   "devDependencies": {
@@ -23,6 +22,7 @@
     "ember-cli": "^2.16.0-beta.2",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.7.0",
+    "ember-cli-concat": "^1.2.1",
     "ember-cli-content-security-policy": "^1.0.0",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.0.0",
@@ -34,7 +34,6 @@
     "ember-cli-sass": "^7.0.0",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
-    "ember-cli-staticboot": "tchak/ember-cli-staticboot#app-shell",
     "ember-cli-uglify": "^1.2.0",
     "ember-cli-update": "^0.6.6",
     "ember-export-application-global": "^2.0.0",
@@ -42,19 +41,19 @@
     "ember-intl": "ember-intl/ember-intl#module-uni-support",
     "ember-load-initializers": "^1.0.0",
     "ember-native-dom-event-dispatcher": "^0.6.3",
+    "ember-performance-tracking": "^0.1.3",
     "ember-resolver": "^4.3.0",
     "ember-service-worker": "^0.6.9",
     "ember-service-worker-asset-cache": "^0.6.1",
-    "ember-service-worker-cache-fallback": "^0.6.1",
-    "ember-source": "~2.15.0",
+    "ember-service-worker-index": "^0.6.3",
+    "ember-source": "~2.16.0",
     "ember-web-app": "^1.3.1",
     "ember-web-app-rename": "^1.0.0",
     "loader.js": "^4.2.3",
     "loglevel": "^1.5.0",
+    "prember": "^0.1.0",
+    "prember-middleware": "^0.1.0",
     "tachyons": "^4.8.1"
-  },
-  "ember-addon": {
-    "paths": ["lib/ember-cli-one-script"]
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
