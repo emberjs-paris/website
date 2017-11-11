@@ -31,6 +31,11 @@ module.exports = function(defaults) {
     fingerprint: {
       extensions: extensions.concat(['json']),
       replaceExtensions: ['html', 'css', 'js', 'headers']
+    },
+    'ember-cli-critical': {
+      critical: {
+        minify: true
+      }
     }
   });
 

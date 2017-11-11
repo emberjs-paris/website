@@ -24,6 +24,7 @@
     "ember-cli-babel": "^6.7.0",
     "ember-cli-concat": "^1.2.1",
     "ember-cli-content-security-policy": "^1.0.0",
+    "ember-cli-critical": "^0.1.1",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.0.0",
     "ember-cli-fastboot": "tchak/ember-cli-fastboot#uni-modules-support",
