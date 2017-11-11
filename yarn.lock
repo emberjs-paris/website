@@ -2680,6 +2680,12 @@ ember-assign-polyfill@^2.0.2:
     ember-cli-babel "^6.6.0"
     ember-cli-version-checker "^1.2.0"
 
+ember-cli-addon-versions@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-addon-versions/-/ember-cli-addon-versions-1.0.1.tgz#b2df799a76186a9724ee301bb5cb52984cf94db0"
+  dependencies:
+    broccoli-file-creator "^1.1.1"
+
 ember-cli-app-version@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/ember-cli-app-version/-/ember-cli-app-version-3.1.0.tgz#074b0330581a7b8ab094ff07fefb34e0d0254bfd"
