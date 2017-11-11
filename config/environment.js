@@ -5,6 +5,12 @@ function csp(...sources) {
   return `'${sources.join("' '")}'`;
 }
 
+const csscsp = [
+  'self',
+  'sha256-aqNNdDLnnrDOnTNdkJpYlAxKVJtLt9CtFLklmInuUAE=',
+  'sha256-zdpv4rk5rZiqxCCKqp/742oh1C3gDd3EAcznJXwty3o='
+];
+
 module.exports = function(environment) {
   let ENV = {
     'ember-resolver': {
@@ -49,11 +55,7 @@ module.exports = function(environment) {
         'sha256-37u63EBe1EibDZ3vZNr6mxLepqlY1CQw+4N89HrzP9s=',
         'sha256-5F9qkMcwZI0sADrix4xBPOh7Yo/HyEEtXaYBqLNT6oc='
       ),
-      'style-src': csp(
-        'self',
-        'sha256-aqNNdDLnnrDOnTNdkJpYlAxKVJtLt9CtFLklmInuUAE=',
-        'sha256-zdpv4rk5rZiqxCCKqp/742oh1C3gDd3EAcznJXwty3o='
-      )
+      'style-src': csp(...csscsp)
     }
   };
 
@@ -85,6 +87,10 @@ module.exports = function(environment) {
         'sha256-m9taKmEombeKW3ABisX58cE1OIW7P1UxEgJxvbasBpE=',
         'sha256-wkaYpaS7MXK6pZevEXbHArUs2Tr4J9hxuUz+A7z/XUo='
       ),
+      'style-src': csp(...[
+        ...csscsp,
+        'sha256-GZlIDdLJBUxhU2LK9VmiI2NVl59jTKRJrBNYby+txyU='
+      ]),
       'report-uri': 'https://tchak.report-uri.io/r/default/csp/reportOnly'
     };
   }
