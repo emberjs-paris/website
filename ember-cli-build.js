@@ -11,7 +11,7 @@ module.exports = function(defaults) {
     },
     'asset-cache': {
       include: ['assets/**/*', 'images/**/*'],
-      version: '4'
+      version: '5'
     },
     emberCliConcat: {
       js: {
@@ -25,7 +25,7 @@ module.exports = function(defaults) {
       'jquery.js': null
     },
     prember: {
-      urls: ['/', '/404']
+      urls: ['/app-shell', '/404']
     },
     fingerprint: {
       extensions: extensions.concat(['json']),
