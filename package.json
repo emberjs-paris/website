@@ -15,7 +15,7 @@
     "start": "ember serve",
     "test": "ember test",
     "debug": "ember build && node --debug-brk --inspect ./node_modules/.bin/ember serve",
-    "csp-headers": "ember csp-headers --environment production"
+    "write-csp-header": "ember csp-headers --environment production 2>&1 >/dev/null | xargs node ./scripts/csp-header.js"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.5.0",

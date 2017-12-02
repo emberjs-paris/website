@@ -84,7 +84,8 @@ module.exports = function(environment) {
         'self',
         'sha256-wkaYpaS7MXK6pZevEXbHArUs2Tr4J9hxuUz+A7z/XUo=',
         'sha256-m9taKmEombeKW3ABisX58cE1OIW7P1UxEgJxvbasBpE=',
-        'sha256-wkaYpaS7MXK6pZevEXbHArUs2Tr4J9hxuUz+A7z/XUo='
+        'sha256-wkaYpaS7MXK6pZevEXbHArUs2Tr4J9hxuUz+A7z/XUo=',
+        'sha256-nnoMqy1tGzPWErF8+eKwYH7vgjFzICQoju/n91Qgdak='
       ),
       'style-src': csp(...[
         ...csscsp,
