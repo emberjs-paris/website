@@ -1,4 +1,3 @@
-/* eslint-env node */
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const Funnel = require('broccoli-funnel');
 const mergeTrees = require('broccoli-merge-trees');

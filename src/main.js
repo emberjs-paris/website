@@ -8,6 +8,6 @@ const App = Application.extend({
   Resolver
 });
 
-loadInitializers(App, config.modulePrefix + '/src/init');
+loadInitializers(App, `${config.modulePrefix}/src/init`);
 
 export default App;
