@@ -1,22 +1,7 @@
 'use strict';
 
-function csp(...sources) {
-  return `'${sources.join("' '")}'`;
-}
-
-const csscsp = [
-  'self',
-  'sha256-aqNNdDLnnrDOnTNdkJpYlAxKVJtLt9CtFLklmInuUAE=',
-  'sha256-zdpv4rk5rZiqxCCKqp/742oh1C3gDd3EAcznJXwty3o='
-];
-
 module.exports = function(environment) {
   let ENV = {
-    'ember-resolver': {
-      features: {
-        EMBER_RESOLVER_MODULE_UNIFICATION: true
-      }
-    },
     modulePrefix: 'website',
     environment,
     rootURL: '/',
@@ -24,8 +9,7 @@ module.exports = function(environment) {
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
-        // e.g. 'with-controller': true
-        'ember-module-unification': true
+        // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
@@ -34,27 +18,8 @@ module.exports = function(environment) {
     },
 
     APP: {
-      netlifyBuildBranch: process.env.BRANCH
       // Here you can pass flags/options to your application instance
       // when it is created
-    },
-
-    fastboot: {
-      hostWhitelist: ['emberjs.paris', /^localhost:\d+$/]
-    },
-
-    contentSecurityPolicy: {
-      'manifest-src': "'self'",
-      'script-src': csp(
-        'self',
-        'sha256-wkaYpaS7MXK6pZevEXbHArUs2Tr4J9hxuUz+A7z/XUo=',
-        'sha256-eTCgFNR35DsTcP7Hae6DsP0kdUl2PKAQxGXGFvOTXjs=',
-        // Test
-        'sha256-S15KOuOY2QCOcSlnW07Fuw/2GIByCPLS8WPQ00QAHrk=',
-        'sha256-37u63EBe1EibDZ3vZNr6mxLepqlY1CQw+4N89HrzP9s=',
-        'sha256-5F9qkMcwZI0sADrix4xBPOh7Yo/HyEEtXaYBqLNT6oc='
-      ),
-      'style-src': csp(...csscsp)
     }
   };
 
@@ -75,24 +40,11 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.APP.autoboot = false;
   }
 
   if (environment === 'production') {
-    ENV.contentSecurityPolicy = {
-      'manifest-src': "'self'",
-      'script-src': csp(
-        'self',
-        'sha256-wkaYpaS7MXK6pZevEXbHArUs2Tr4J9hxuUz+A7z/XUo=',
-        'sha256-m9taKmEombeKW3ABisX58cE1OIW7P1UxEgJxvbasBpE=',
-        'sha256-wkaYpaS7MXK6pZevEXbHArUs2Tr4J9hxuUz+A7z/XUo=',
-        'sha256-nnoMqy1tGzPWErF8+eKwYH7vgjFzICQoju/n91Qgdak='
-      ),
-      'style-src': csp(...[
-        ...csscsp,
-        'sha256-GZlIDdLJBUxhU2LK9VmiI2NVl59jTKRJrBNYby+txyU='
-      ]),
-      'report-uri': 'https://tchak.report-uri.io/r/default/csp/reportOnly'
-    };
+    // here you can enable a production-specific feature
   }
 
   return ENV;
