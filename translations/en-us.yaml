@@ -1,1 +1,3 @@
-price_banner: The {product} costs {price, number, USD}
+home:
+  title: "EmberJS Paris"
+  upcoming_events: "upcoming events"
