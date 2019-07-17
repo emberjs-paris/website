@@ -1,3 +1,159 @@
+html, body {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   font-family: sans-serif;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.access-token {
+  word-wrap: break-word;
+}
+
+.header {
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  height: 90px;
+}
+
+.header__logo {
+  width: 65px;
+}
+
+.header__title {
+
+}
+
+.nav {
+  align-items: center;
+  background-color: #FFF;
+  color: #FFF;
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+}
+
+.nav__link {
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.21);
+  display: flex;
+  flex: 1;
+  font-size: 14px;
+  height: 100%;
+  justify-content: center;
+}
+.nav__link:hover{
+  background-color: #3e3e3e;
+}
+.nav__link:hover .nav__icon {
+  fill: #FFF;
+}
+.nav__icon {
+  fill: #3e3e3e;
+  width: 24px;
+}
+.nav__link--title {
+  font-size: 22px;
+  height: 50px;
+}
+
+.login {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 36px;
+}
+
+.login__button {
+  background-color: #3E3E3E;
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  height: 75px;
+}
+
+.profile {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 36px;
+}
+.profile__avatar {
+  border-radius: 50%;
+  width: 120px;
+}
+.profile__authn-code {
+  text-align: center;
+  word-wrap: anywhere;
+}
+.profile__logout-btn {
+  background-color: #3E3E3E;
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 600;
+  height: 75px;
+  letter-spacing: 1.2px;
+  width: 100%;
+}
+
+.submission {
+  padding: 0 36px;
+}
+.submission__button {
+  background-color: #327BF6;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 600;
+  height: 52px;
+}
+.submission-form {
+  display: flex;
+  flex-direction: column;
+}
+.submission-form__desc {
+  min-height: 150px;
+}
+
+
+.about {
+  background-color: #3e3e3e;
+  color: #FFF;
+  display: flex;
+  flex: 1;
+  padding: 0 36px;
+}
+.about__logo {
+  width: 130px;
+  margin: auto;
+}
+
+/* HELPERS */
+
+.mb-24 {
+  margin-bottom: 24px;  
 }

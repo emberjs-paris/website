@@ -1,1 +1,24 @@
+<header class="header">
+  <img class="header__logo" src="{{assets}}/images/twitter-avatar.png" alt="Ember Paris Tomster mascot">
+  <h1 class="header__title">EmberJS Paris</h1>
+
+</header>
+
 {{outlet}}
+
+<footer>
+  <nav class="nav">
+    <LinkTo @route="index" class="nav__link">
+      {{svg-jar "home" class="nav__icon"}}
+    </LinkTo>
+    <LinkTo @route="about" class="nav__link">
+      {{svg-jar "info" class="nav__icon"}}
+    </LinkTo>
+    <LinkTo @route="submission" class="nav__link">
+      {{svg-jar "pencil-edit" class="nav__icon"}}
+    </LinkTo>
+    <LinkTo @route="profile" class="nav__link">
+      {{svg-jar "user" class="nav__icon"}}
+    </LinkTo>
+  </nav>
+</footer>

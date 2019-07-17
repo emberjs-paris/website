@@ -1,3 +1,6 @@
+nav:
+  talks: "Talks"
+  talk_submit: "Submit a talk"
 home:
   title: "EmberJS Paris"
   upcoming_events: "upcoming events"

@@ -1,0 +1,10 @@
+<main class="submission">
+  <form class="submission-form" {{action "submitTask" on="submit"}}>
+    <label>Talk title</label>
+    <Input class="mb-24 talk-submission-form__title" @value={{this.talkTitle}} />
+
+    <label>Talk description</label>
+    <Textarea class="mb-24 submission-form__desc" @value={{this.talkDescription}} />
+    <button class="submission__button" type="submit">SUBMIT</button>
+  </form>
+</main>

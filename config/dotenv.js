@@ -6,9 +6,8 @@ const path = require('path');
 
 module.exports = function(/* env */) {
   return {
-    clientAllowedKeys: [],
+    clientAllowedKeys: ['GITHUB_DEV_CLIENT_ID'],
     fastbootAllowedKeys: [],
-    failOnMissingKey: false,
-    path: path.join(__dirname, '.env')
-  }
+    failOnMissingKey: false
+  };
 };

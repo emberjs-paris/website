@@ -20,8 +20,24 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    torii: {
+      sessionServiceName: 'session',
+      providers: {
+        'github-oauth2': {
+          scope: 'repo user'
+        }
+      }
     }
   };
+
+  if (environment === 'development') {
+    ENV.torii.providers['github-oauth2'].apiKey =
+      process.env.GITHUB_DEV_CLIENT_ID;
+    ENV.torii.providers['github-oauth2'].redirectUri = 'http://localhost:4200';
+    ENV.torii.providers['github-oauth2'].tokenExchangeUri = process.env.DEV_TOKEN_EXCHANGE_URL;
+  }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

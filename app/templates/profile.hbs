@@ -1,0 +1,19 @@
+<main class="profile">
+  <img src={{model.avatarUrl}} alt="avatar" class="profile__avatar">
+  <p>
+    <strong>{{model.login}}</strong>
+  </p>
+  <p>Full Name: {{model.name}}</p>
+
+  <p>
+    API Key: {{config.apiKey}}
+  </p>
+
+  <p class="profile__authn-code">
+    Authztn Code: {{session.data.authenticated.access_token}}
+  </p>
+
+  {{#if session.isAuthenticated}}
+    <button {{action "logout"}} class="profile__logout-btn">Log Out</button>
+  {{/if}}
+</main>
